@@ -25,6 +25,7 @@ export const TruthTable: React.FC<Props> = ({
 }) => {
   const renderCell = useCallback((cell: any, columnKey: any) => {
     const cellValue = cell[columnKey];
+
     return (
       <span
         className={
@@ -61,18 +62,17 @@ export const TruthTable: React.FC<Props> = ({
     );
 
   return (
-    
     <Table aria-label="Tabla de verdad" className="min-w-[280px]">
       <TableHeader columns={columns}>
         {(column: any) => (
-          <TableColumn key={column.key} className="text-md">
+          <TableColumn  className="text-center text-md" key={column.key}>
             {column.title}
           </TableColumn>
         )}
       </TableHeader>
       <TableBody items={truthData}>
         {(item: any) => (
-          <TableRow key={item.key}>
+          <TableRow className="text-center" key={item.key}>
             {(columnKey) => (
               <TableCell>{renderCell(item, columnKey)}</TableCell>
             )}
