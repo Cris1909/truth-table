@@ -144,7 +144,7 @@ export const TruthTableGenerator = () => {
   const isInvalidForm = vars.includes("") || expressions.includes("");
 
   return (
-    <div className="grid gap-2 mt-10">
+    <div className="grid gap-2">
       {showTable ? (
         <motion.div
           initial={{
@@ -186,7 +186,7 @@ export const TruthTableGenerator = () => {
           </Button>
         </motion.div>
       ) : (
-        <div className="max-w-[600px] grid gap-2">
+        <div className="max-w-[600px] grid gap-2 mt-10">
           <h2 className="text-center text-2xl font-bold">
             Generador de Tabla de verdad
           </h2>
